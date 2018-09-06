@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>《今日头条》你关心的,才是头条! - TouTiao.com</title>
+    <script src="/assets/index/js/rem1334.js"></script>
+     <link rel="shortcut icon" href="/assets/index/img/iphone-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/index/css/search.css">
+    <link rel="stylesheet" href="/assets/public/public.css">
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="top-bar">
+            <div class="abs-l">
+                <a href="/index.php?c=news&m=index" class="btn"></a>
+            </div>
+            <div class="abs_m">搜索</div>
+        </div>
+    </header>
+    <form action="/search/" method="get" id="search-form">
+        <div class="search-content">
+            <a href="" class="action-chooser"></a>
+            <div class="arrowdown"></div>
+            <input type="search" placeholder="请输入搜索关键词" id="search-input" name="keyword">
+            <input type="hidden" name="form" id="form" value="search-tab">
+        </div>
+        <div class="action-navigation">
+            <div class="arrowup-shadow"></div>
+            <div class="arrowup"></div>
+            <ul class="navigation-categories">
+                <li>
+                    <a href="javascrit:void(0)">新闻</a>
+                </li>
+                <li>
+                    <a href="javascrit:void(0)">神马</a>
+                </li>
+                <li></li>
+            </ul>
+        </div>
+    </form>
+     <content id="search">
+            <div class="hot_words">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)" class="hot_words_link">
+                            火箭签约安东尼
+                        </a>
+                    </li>
+                     <li>
+                        <a href="javascript:void(0)" class="hot_words_link">
+                            山东暴雨预警
+                        </a>
+                    </li>
+                     <li>
+                        <a href="javascript:void(0)" class="hot_words_link">
+                            黄晓明 股票操纵
+                        </a>
+                    </li>
+                     <li>
+                        <a href="javascript:void(0)" class="hot_words_link">
+                            韩学臣被判无期
+                        </a>
+                    </li>
+                     <li>
+                        <a href="javascript:void(0)" class="hot_words_link">
+                            茅台致歉
+                        </a>
+                    </li>
+                     <li>
+                        <a href="javascript:void(0)" class="hot_words_link">
+                            阅文收购新丽传媒
+                        </a>
+                    </li>
+                     <li>
+                        <a href="javascript:void(0)" class="hot_words_link">
+                            哈登对女子动粗
+                        </a>
+                    </li>
+                     <li>
+                        <a href="javascript:void(0)" class="hot_words_link">
+                            南京楼市调控新政
+                        </a>
+                    </li>
+                     <li>
+                        <a href="javascript:void(0)" class="hot_words_link">
+                            怪物猎人世界下架
+                        </a>
+                    </li>
+                     <li>
+                        <a href="javascript:void(0)" class="hot_words_link">
+                            江西彭小峰被批捕
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </content>
+</body>
+</html>
+<!-- <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜索</title>
+</head>
+<body>
+    <ul id="ul">
+        <?php foreach($results as $k => $v) {?>
+        <li>
+            <?php echo $v['title']?>
+        </li>
+        <?php } ?>
+    </ul>
+    <button id="loadmore">加载更多</button>
+    <script>
+        var page = 1;
+        $(function () {
+            $('#loadmore').click(function () {
+                $.ajax({
+                    url:'/index.php?c=news&m=searchList&s=<?php echo $keyword?>'
+                    data:{
+                        page:page + 1
+                    },
+                    success:function () {
+                        page = page +1;
+                        data = JSON.parse(data);
+                        if (data.left){
+                            data.forEach(v=>{
+                                $(`<li>{$v.title}</li>`).appendTo('#ul')
+                            })
+                        }else {
+                            alert('没有更多了')
+                        }
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html> -->

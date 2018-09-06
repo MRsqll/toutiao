@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>今日头条</title>
+    <link rel="shortcut icon" href="/assets/index/img/iphone-logo.png" type="image/x-icon">
+    <script src="/assets/index/js/rem1334.js"></script>
+    <link rel="stylesheet" href="/assets/index/css/toutiao.css">
+    <link rel="stylesheet" href="/assets/public/public.css">
+</head>
+<body>
+<div class="main">
+    <div class="header">
+        <div class="abs-m">
+            <a href="#" class="refresh-title"></a>
+            <div class="refreshBtn-container">
+                <i class="refresh-btn"></i>
+            </div>
+        </div>
+        <div class="abs-l">
+            <a href="javascript:void (0)" class="msg-box">
+                <div class="circle"></div>
+            </a>
+        </div>
+        <div class="abs-r">
+            <a href="/index.php?c=news&m=search" class="search"></a>
+        </div>
+    </div>
+    <div class="body">
+        <div class="status-bar">
+            <div class="top-menu-more">
+                <div class="list-shadow"></div>
+                <a href="/index.php?c=news&m=category" class="more-btn">+</a>
+            </div>
+            <div class="top-menu-list">
+                <?php foreach ($category as $k => $v) { ?>
+                <a href="/index.php?c=news&m=index&cid=<?php echo $v['id']?>" class="btn"><?php echo $v['name']?></a>
+                <?php } ?>
+            </div>
+        </div>
+        <div>
+            <div id="pageletListContent" class="feed-list-container">
+                <div class="list-content">
+                <?php foreach ( $news as $k => $v ) {?>
+                    <section class="has-action middle-mode ">
+                        <a href="<?php echo $v['url']?>" class="article-link">
+                            <div class="content">
+                                <div class="item-detail">
+                                    <h3 class="dotdot line3"><?php echo $v['title']?></h3>
+                                    <div class="item-info">
+                                        <div>
+                                            <span class="stick-label ">置顶</span>
+                                            <span class="src">央视网新闻</span>
+                                            <span class="cmt">
+                                                评论
+                                                52
+                                                <!--<span class="time">45分钟前</span>-->
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-img-holder">
+                                    <img src="<?php echo $v['image_urls']?>" />
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                <?php } ?>
+                   <!--  <section class="has-action ">
+                        <a href="javascript:void (0)" class="article-link clearfix ">
+                            <div class="content">
+                                <div class="item-detail">
+                                    <h3 class="dotdot line">习近平时间｜习近平寄语青年：为构建人类命运共同体添砖献瓦</h3>
+                                    <div class="item-info">
+                                        <div>
+                                            <span class="stick-label ">置顶</span>
+                                            <span class="src space">新华社</span>
+                                            <span class="cmt">评论 52</span>
+                                            <span class="time">2小时前</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </section>
+                    <section class="has-action ">
+                        <a href="javascript:void (0)" class="article-link clearfix ">
+                            <div class="content">
+                                <div class="item-detail">
+                                    <h3 class="dotdot line">茅台放弃国酒商标申请 向国家商标评审委员会致歉</h3>
+                                    <div class="item-info">
+                                        <div>
+                                            <span class="stick-label min-box">热</span>
+                                            <span class="src space">中国新闻网</span>
+                                            <span class="cmt">评论 78</span>
+                                            <span class="time">8分钟前</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </section>
+                    <section class="has-action ">
+                        <a href="javascript:void (0)" class="article-link clearfix ">
+                            <div class="content">
+                                <div class="item-detail">
+                                    <h3 class="dotdot line">将星闪耀：4大军种及武警部队参谋部近期皆有新鲜血液注入</h3>
+                                    <div class="item-info">
+                                        <div>
+                                            <span class="stick-label min-box">热</span>
+                                            <span class="src space">澎湃新闻</span>
+                                            <span class="cmt">评论 0</span>
+                                            <span class="time">11分钟前</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </section>
+                    <section class="has-action ">
+                        <a href="javascript:void (0)" class="article-link clearfix ">
+                            <div class="content">
+                                <div class="item-detail">
+                                    <h3 class="dotdot line">大反转！黄晓明证实卷入20亿股票操纵大案，名下近50家公司，甚至涉及长生生物？</h3>
+                                    <div class="item-images">
+                                        <ul class="item-img">
+                                            <li class="list-img-holder">
+                                                <img src="/assets/index/img/1.jpg" height="120" width="172"/></li>
+                                            <li class="list-img-holder">
+                                                <img src="/assets/index/img/2.jpg" alt="">
+                                            </li>
+                                            <li class="list-img-holder">
+                                                <img src="/assets/index/img/3.jpg" alt="">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="item-info">
+                                        <div>
+                                            <span class="stick-label min-box hot">热</span>
+                                            <span class="src space">21财闻汇</span>
+                                            <span class="cmt">评论 379</span>
+                                            <span class="time">57分钟前</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </section>
+                    <section class="has-action ">
+                        <a href="javascript:void (0)" class="article-link clearfix ">
+                            <div class="content">
+                                <div class="item-detail">
+                                    <h3 class="dotdot line">
+                                        买车险到工行，一站理赔养车。
+                                    </h3>
+                                    <div class="item-images img">
+                                    </div>
+                                    <div class="item-info">
+                                        <div>
+                                            <span class="stick-label min-box hot">广告</span>
+                                            <span class="src space">一汽-大众志国星</span>
+                                            <span class="cmt">评论 1</span>
+                                            <span class="time">2小时前</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </section> -->
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+	<script src="/assets/public/jquery.twbsPagination.min.js"></script>
+	<link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/index/css/index.css">
+</head>
+<body>
+	<ul style="display: flex">
+		<?php foreach( $category as $k => $v) {?>
+		<li class="<?php echo $v['id'] == $cid?'active':'' ?>">
+			<a href="/index.php?c=news&m=index&cid=<?php echo $v['id']?>&page=1">
+				<?php echo $v['name']?>
+			</a>
+		</li>
+		<?php } ?>
+	</ul>
+	<ul>
+		<?php foreach ($news as $k => $v ) { ?>
+		<li>
+			<?php echo $v['title']?>
+		</li>
+		<?php } ?>
+	</ul>
+	总条数：
+	<?php echo $num?>
+	<ul id="pagination-demo" class="pagination-sm"></ul>
+<script>
+	$(function () {
+        $('#pagination-demo').twbsPagination({
+            totalPages:<?php echo $page_total?>,
+            visiblePages: 3,
+			startPage:<?php echo $page?>,
+            onPageClick: function (event, page) {
+               console.log(page);
+               if(page !=<?php echo $page?>){
+					location.href = "/index.php?c=news&m=index&cid=<?php echo $cid?>&page="+page;
+			   }
+            }
+        });
+    })
+</script>
+</body>
+</html> -->

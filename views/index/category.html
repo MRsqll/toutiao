@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="/assets/index/css/channel.css">
+    <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/assets/index/js/rem1334.js"></script>
+    <title>频道管理</title>
+</head>
+<body>
+    <div id="channels">
+        <div class="main">
+            <div class="toolbar">
+                <span class="title">
+                    <a href="">频道管理</a>
+                </span>
+                <a href="/index.php?c=news&m=index">
+                    <span class="backBtn">&#xe604;</span>
+                </a>
+            </div>
+        </div>
+
+
+
+        <div class="clude">
+            <div class="addcontrol">
+                <span class="controltitle">点击删除以下频道</span>
+            </div>
+            <ul class="controlDetail" id="aa">
+                    <?php foreach($category as $k => $v) { ?>
+                    <li class="channelFigure">
+                        <a href="javascript:void(0)"><?php echo $v['name']?></a>
+                    </li>
+                    <?php }?>
+                    
+                  
+            </ul>
+        </div>
+
+        <div class="clude2">
+            <div class="addcontrol">
+                <span class="controltitle">点击添加以下频道</span>
+            </div>
+            <ul class="controlDetail" id="bb">
+                <?php foreach ($categorys as $k => $v ) {?>
+                    <li class="channelFigure">
+                        <a href="javascript:void(0)"><?php echo $v['name']?></a>
+                    </li>
+                <?php }?>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+    <script src="/assets/index/js/channel.js"></script>

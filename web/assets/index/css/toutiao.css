@@ -1,0 +1,225 @@
+.main{
+    position: relative;
+    padding: 1.6rem 0 0 0;
+}
+.header{
+     width: 100%;
+     height: .88rem;
+     background-color: #D43D3D;
+     position: fixed;
+     top: 0;
+     z-index: 1;
+ }
+ .abs-m{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+ }
+ .refresh-title{
+     width: 1.96rem;
+     height: .88rem;
+     display: block;
+     padding-left: .3rem;
+     background-image: url("../img/title.png");
+     background-size: 1.66rem;
+     background-repeat: no-repeat;
+     background-position-x: 100%;
+     background-position-y: 50%;
+
+ }
+ .refreshBtn-container{
+     width: .5rem;
+ }
+ .refresh-btn{
+     width: .5rem;
+     height: .88rem;
+     display: inline-block;
+     font-style: normal;
+     color: #fff;
+     background: url("../img/refresh.png") no-repeat center center;
+     background-size: .3rem;
+
+ }
+ .abs-l{
+     width: 1.08rem;
+     height: .5rem;
+     position: absolute;
+     top: .19rem;
+     left: .2rem;
+
+ }
+ .msg-box{
+     display: block;
+     width: .64rem;
+     height: .5rem;
+     margin-left: .24rem;
+     background: url("../img/envelope.png") no-repeat ;
+     background-size: contain;
+ }
+ .circle{
+     width: .2rem;
+     height: .2rem;
+     background-color: white;
+     border-radius: 50%;
+     position: absolute;
+     right: .1rem;
+     top: .04rem;
+     left: .34rem;
+ }
+ .abs-r{
+     width: .72rem;
+     height: .48rem;
+     position: absolute;
+     right: .2rem;
+     top: .19rem;
+ }
+ .search{
+     width: .48rem;
+     height: .48rem;
+     padding-right: .24rem;
+     display: block;
+     background: url("../img/search-one.png") no-repeat center center;
+     background-size: contain;
+ }
+
+ .status-bar{
+     width: 100%;
+     height: .74rem;
+     background-color: #F4F5F6;
+     position: fixed;
+     top: .88rem;
+     z-index: 1;
+ }
+ .top-menu-more{
+     width: .8rem;
+     height: .74rem;
+     background-color: #F4F5F6;
+     float: right;
+     box-shadow: -5px 0 5px rgba(0,0,0,.3);
+ }
+.more-btn{
+    display: block;
+    width: .8rem;
+    height: .72rem;
+    font-size: .7rem;
+    line-height: .6rem;
+    text-align: center;
+    color: red;
+}
+.top-menu-list{
+    width: 6.7rem;
+    height: .72rem;
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+/*滚动条消失还能继续滚动*/
+ ::-webkit-scrollbar{
+     display:none;
+ }
+.btn{
+    display: block;
+    width: 1.18rem;
+    height: .72rem;
+    padding: 0.1rem .2rem .1rem .3rem;
+    font-size: .34rem;
+    color: #505050;
+    line-height: .52rem;
+}
+.btn:nth-child(1){
+    color: #f85959;
+}
+.feed-list-container,.list-content{
+    width: 100%;
+    position: relative;
+    background-color: white;
+}
+.content{
+    box-sizing: border-box;
+    display:flex;
+    align-items:center;
+}
+.has-action{
+    width: 100%;
+    padding: 0 .3rem;
+}
+.article-link{
+    width: 100%;
+    padding: .32rem 0;
+    display: block;
+    border-bottom: .01rem solid #F4F4F4;
+}
+.clearfix{
+    padding: .32rem 0;
+}
+.item-detail{
+    width: 100%;
+}
+.dotdot{
+    font-size: .34rem;
+    line-height: .42rem;
+    font-weight: 400;
+    color: #222;
+    margin-right: .24rem;
+}
+.line{
+    margin: 0;
+}
+.item-info{
+    height: .26rem;
+    margin-top: .12rem;
+}
+.item-info div{
+    display: flex;
+}
+.stick-label{
+    width: .5rem;
+    border: 0.01rem solid #FEDEDE;
+    display: inline-block;
+    font-size: .18rem;
+    color: #f85959;
+    line-height: .23rem;
+    text-align: center;
+    border-radius: .04rem;
+    margin-right: .1rem;
+}
+.src,.cmt,.time{
+    display: block;
+    height: .24rem;
+    margin-right: .1rem;
+    font-size: .2rem;
+    line-height: .24rem;
+    text-align: center;
+    color: #999;
+}
+.list-img-holder{
+    width: 2.28rem;
+    height: 1.48rem;
+}
+.list-img-holder img{
+    width: 2.28rem;
+    height: 1.48rem;
+}
+.min-box{
+    width: .24rem;
+}
+.item-images{
+    width: 100%;
+    margin-top: .12rem;
+}
+.item-img{
+    display: flex;
+    justify-content: space-between;
+}
+.list-img-holder{
+    width: 2.32rem;
+}
+.hot{
+    display: none;
+}
+.img{
+    display: block;
+    background: url("../img/car.png") no-repeat;
+    height: 3.6rem;
+    background-size: 100%;
+}
