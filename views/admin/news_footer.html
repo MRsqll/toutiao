@@ -1,0 +1,27 @@
+
+</div>
+
+
+<script>
+    $(function () {
+        $('#pagination-demo').twbsPagination({
+            totalPages:<?php echo $page_total?>,
+        visiblePages: 3,
+            startPage:<?php echo $page?>,
+        onPageClick: function (event, page) {
+            console.log(page);
+            if(page !=<?php echo $page?>){
+                location.href = "/admin.php?c=admin&m=news&page="+page;
+            }
+        }
+    });
+    })
+</script>
+</body>
+</html>
+
+
+<script src="/assets/admin/js/popper.min.js"></script>
+<script src="/assets/admin/js/stacked-menu.min.js"></script>
+<script src="/assets/admin/js/perfect-scrollbar.min.js"></script>
+<script src="/assets/admin/js/admin.js"> </script>

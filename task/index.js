@@ -1,4 +1,3 @@
-
 const request = require ('request');//发送请求
 const cheerio = require ('cheerio');//编程语言
 const async = require('async');//多次请求，请求一次完成后再请求下一次
@@ -6,6 +5,7 @@ const iconv = require('iconv-lite');//编码方式
 const mysql = require('mysql');//连接数据库
 const filter = require('bloom-filter-x');//哈希函数
 const fs = require('fs');//连接数据库
+
     let connection = mysql.createConnection({
         host:'localhost',
         user:'root',
@@ -71,7 +71,7 @@ function fetch_news(){
                         let dsc = v.dsc;
                         let url = v.url;
                         let image_url = v.image_urls;
-                        let cid = 1; 
+                        let cid = 1;
                         let insert_mysql = 'insert into news (cid,title,dsc,image_urls,url,pubtime,content) values (?,?,?,?,?,?,?)';
                         connection.query(insert_mysql,[cid,title,dsc,image_url,url,pubtime,content],(err,results,fields)=>{
                             if (err) throw  err;

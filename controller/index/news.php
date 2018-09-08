@@ -35,23 +35,37 @@ class news extends db
 
         include '../views/index/index.html';
     }
-
+//搜索页面资源
     public function search()
     {
-        if(isset($_GET['k'])){
-            $keyword = $_GET['k'];
-        }else{
-            $keyword = ' ';
+         $total_num = null;
+         $results = [];
+         $keyword = '';
+        if(isset($_GET['wd'])){
+            $keyword = $_GET['wd'];
+            $total_num = $this->pdo
+                ->query('select count(*) as total_num from news where title like "%'.$keyword.'%"')
+                ->fetch()['total_num'];
+
+            $results = $this->pdo
+                ->query('select * from news where title like "%' . $keyword . '%" limit '. $this::PER_PAGE)
+                ->fetchAll();
         }
-        if(isset($_GET['page'])){
-            $page = $_GET['page'];
-        }else{
-            $page = 1;
-        }
-        $results = $this->pdo
-            ->query('select * from news where title like "%' . $keyword . '%" limit '. $this::PER_PAGE .' offset '.($page -1) * $this::PER_PAGE)
-            ->fetchAll();
         include '../views/index/search.html';
+    }
+//搜索数据资源
+    public function searchdata()
+    {
+        $page = 1;
+        $keyword = '';
+        if(isset( $_GET['page']) && $_GET['wd'] ){
+            $r = $this->pdo
+                ->query('select * from news where title like "%' . $keyword . '%" limit '. $this::PER_PAGE .' offset '.($page - 1 )*$this::PER_PAGE)
+                ->fetchAll();
+            echo json_encode($r);
+        }else{
+            echo json_encode('参数错误');
+        }
     }
 //分类页面
     public function category()

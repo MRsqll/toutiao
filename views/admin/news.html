@@ -1,13 +1,77 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>新闻</title>
-</head>
-<body>
-    <h1>这是新闻页</h1>
-</body>
-</html>
+<?php include '../views/admin/news_header.html' ?>
+<main class="app-main">
+    <div class="wrapper">
+        <div class="page">
+            <div class="page-inner">
+                <header class="page-title-bar">
+                    <p class="lead">
+                        <span class="font-weight-bold">Hi, Beni.</span>
+                        <span class="d-block text-muted">Here’s what’s happening with your business today.</span>
+                    </p>
+                </header>
+                <div class="page-section">
+                    <h1>News</h1>
+                    <table class="table table-bordered tab-content" style="text-align: center">
+                        <p>总条数：<?php echo $num?></p>
+                        <thead>
+                            <tr>
+                                <th class="text-apple">id</th>
+                                <th class="text-apple">cid</th>
+                                <th class="text-apple">title</th>
+                                <th class="text-apple">dsc</th>
+                                <th class="text-apple">image_urls</th>
+                                <th class="text-apple">url</th>
+                                <th class="text-apple">pubtime</th>
+                                <th class="text-apple">content</th>
+                                <th class="text-apple">delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                        <?php foreach ($news as $k => $v) {?>
+                            <tr data-id="<?php echo $v['id']?>">
+                                <td>
+                                    <input type="text" data-type="id" class="form-control" placeholder="<?php echo $v['id']?>">
+                                </td>
+                                <td>
+                                    <input type="text" data-type="cid" class="form-control" placeholder="<?php echo $v['cid']?>">
+                                </td>
+                                <td>
+                                    <input type="text" data-type="title" class="form-control" placeholder="<?php echo $v['title']?>">
+                                </td>
+                                <td>
+                                    <input type="text" data-type="dsc"  class="form-control" placeholder="<?php echo $v['dsc']?>">
+                                </td>
+                                <td>
+                                    <input type="text" data-type="image_urls" class="form-control" placeholder="<?php echo $v['image_urls']?>">
+                                </td>
+                                <td>
+                                    <input type="text" data-type="url" class="form-control" placeholder="<?php echo $v['url']?>">
+                                </td>
+                                <td>
+                                    <input type="text" data-type="pubtime" class="form-control" placeholder="<?php echo $v['pubtime']?>">
+                                </td>
+                                <td>
+                                    <input type="text" data-type="content" class="form-control" placeholder="<?php echo 111?>">
+                                </td>
+                                <td>
+                                    <button type="button" class="remove btn btn-warning">删除</button>
+                                </td>
+                            </tr>
+                        <?php }?>
+                        </tbody>
+                    </table>
+                    <div class="btn-group mb-2">
+                        <ul id="pagination-demo" class="pagination-sm"></ul>
+                    </div>
+                    <button id="add" type="button" class="btn btn-dark btn-rounded">新建</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<?php include '../views/admin/news_footer.html' ?>
+
+
+

@@ -1,0 +1,731 @@
+<meta charset="UTF-8">
+<title>中台页面</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" href="/assets/admin/img/favicon.ico">
+<script src="/assets/admin/js/pace.min.js"></script>
+<link rel="stylesheet" href="/assets/admin/css/pace.min.css">
+<link rel="stylesheet" href="/assets/admin/css/open-iconic-bootstrap.min.css">
+<link rel="stylesheet" href="/assets/admin/css/main.min.css">
+<script src="/assets/admin/js/main.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="/assets/public/jquery.twbsPagination.min.js"></script>
+<link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="pace  pace-inactive">
+    <div class="pace-progress" data-progress-text="100%" data-progress="99"
+         style="transform: translate3d(100%, 0px, 0px);">
+        <div class="pace-progress-inner"></div>
+    </div>
+    <div class="pace-activity"></div>
+</div>
+<div class="app">
+    <header class="app-header">
+        <!-- .top-bar -->
+        <div class="top-bar">
+            <!-- .top-bar-brand -->
+            <div class="top-bar-brand">
+                <a href="index.html">
+                    <img src="/assets/admin/img/brand-inverse.png" height="32" alt="">
+                </a>
+            </div>
+            <!-- /.top-bar-brand -->
+            <!-- .top-bar-list -->
+            <div class="top-bar-list">
+                <!-- .top-bar-item -->
+                <div class="top-bar-item px-2 d-md-none d-lg-none d-xl-none">
+                    <!-- toggle menu -->
+                    <button class="hamburger hamburger-squeeze" type="button" data-toggle="aside" aria-label="Menu"
+                            aria-controls="navigation">
+                        <span class="hamburger-box">
+                          <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                    <!-- /toggle menu -->
+                </div>
+                <!-- /.top-bar-item -->
+                <!-- .top-bar-item -->
+                <div class="top-bar-item top-bar-item-full">
+                    <!-- .top-bar-search -->
+                    <div class="top-bar-search">
+                        <div class="input-group input-group-search">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <span class="oi oi-magnifying-glass"></span>
+                            </span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Search" placeholder="Search"></div>
+                    </div>
+                    <!-- /.top-bar-search -->
+                </div>
+                <!-- /.top-bar-item -->
+                <!-- .top-bar-item -->
+                <div class="top-bar-item top-bar-item-right px-0 d-none d-sm-flex">
+                    <!-- .nav -->
+                    <ul class="header-nav nav">
+                        <!-- .nav-item -->
+                        <li class="nav-item dropdown header-nav-dropdown has-notified">
+                            <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">
+                                <span class="oi oi-pulse"></span>
+                            </a>
+                            <div class="dropdown-arrow"></div>
+                            <!-- .dropdown-menu -->
+                            <div class="dropdown-menu dropdown-menu-rich dropdown-menu-right">
+                                <h6 class="dropdown-header stop-propagation">
+                              <span>Activities
+                                <span class="badge">(2)</span>
+                              </span>
+                                </h6>
+                                <!-- .dropdown-scroll -->
+
+                                <!-- /.dropdown-scroll -->
+                                <a href="user-activities.html" class="dropdown-footer">All activities
+                                    <i class="fa fa-fw fa-long-arrow-alt-right"></i>
+                                </a>
+                            </div>
+                            <!-- /.dropdown-menu -->
+                        </li>
+                        <!-- /.nav-item -->
+                        <!-- .nav-item -->
+                        <li class="nav-item dropdown header-nav-dropdown has-notified">
+                            <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">
+                                <span class="oi oi-envelope-open"></span>
+                            </a>
+                            <div class="dropdown-arrow"></div>
+                            <!-- .dropdown-menu -->
+                            <div class="dropdown-menu dropdown-menu-rich dropdown-menu-right">
+                                <h6 class="dropdown-header stop-propagation">
+                                    <span>Messages</span>
+                                    <a href="#">Mark all as read</a>
+                                </h6>
+                                <!-- .dropdown-scroll -->
+                                <div class="dropdown-scroll has-scrollable ps">
+                                    <!-- .dropdown-item -->
+                                    <a href="#" class="dropdown-item unread">
+                                        <div class="dropdown-item-body">
+                                            <p class="subject"> Stilearning </p>
+                                            <p class="text text-truncate"> Invitation: Joe's Dinner @ Fri Aug 22 </p>
+                                            <span class="date">2 hours ago</span>
+                                        </div>
+                                    </a>
+                                    <!-- /.dropdown-item -->
+                                    <!-- .dropdown-item -->
+                                    <a href="#" class="dropdown-item">
+
+                                        <div class="dropdown-item-body">
+                                            <p class="subject"> Openlane </p>
+                                            <p class="text text-truncate"> Final reminder: Upgrade to Pro </p>
+                                            <span class="date">23 hours ago</span>
+                                        </div>
+                                    </a>
+                                    <!-- /.dropdown-item -->
+                                    <!-- .dropdown-item -->
+                                    <a href="#" class="dropdown-item">
+                                        <div class="tile tile-circle bg-green"> GZ</div>
+                                        <div class="dropdown-item-body">
+                                            <p class="subject"> Gogo Zoom </p>
+                                            <p class="text text-truncate"> Live healthy with this wireless sensor. </p>
+                                            <span class="date">1 day ago</span>
+                                        </div>
+                                    </a>
+                                    <!-- /.dropdown-item -->
+                                    <!-- .dropdown-item -->
+                                    <a href="#" class="dropdown-item">
+                                        <div class="tile tile-circle bg-teal"> GD</div>
+                                        <div class="dropdown-item-body">
+                                            <p class="subject"> Gold Dex </p>
+                                            <p class="text text-truncate"> Invitation: Design Review @ Mon Jul 7 </p>
+                                            <span class="date">1 day ago</span>
+                                        </div>
+                                    </a>
+                                    <!-- /.dropdown-item -->
+                                    <!-- .dropdown-item -->
+                                    <a href="#" class="dropdown-item">
+
+                                        <div class="dropdown-item-body">
+                                            <p class="subject"> Creative Division </p>
+                                            <p class="text text-truncate"> Need some feedback on this please </p>
+                                            <span class="date">2 days ago</span>
+                                        </div>
+                                    </a>
+                                    <!-- /.dropdown-item -->
+                                    <!-- .dropdown-item -->
+                                    <a href="#" class="dropdown-item">
+                                        <div class="tile tile-circle bg-pink"> LD</div>
+                                        <div class="dropdown-item-body">
+                                            <p class="subject"> Lab Drill </p>
+                                            <p class="text text-truncate"> Our UX exercise is ready </p>
+                                            <span class="date">6 days ago</span>
+                                        </div>
+                                    </a>
+                                    <!-- /.dropdown-item -->
+                                    <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                                        <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                                    </div>
+                                    <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                                        <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                                    </div>
+                                    <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                                        <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                                    </div>
+                                    <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                                        <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                                    </div>
+                                </div>
+                                <!-- /.dropdown-scroll -->
+                                <a href="app-messages.html" class="dropdown-footer">All messages
+                                    <i class="fa fa-fw fa-long-arrow-alt-right"></i>
+                                </a>
+                            </div>
+                            <!-- /.dropdown-menu -->
+                        </li>
+                        <!-- /.nav-item -->
+                        <!-- .nav-item -->
+                        <li class="nav-item dropdown header-nav-dropdown">
+                            <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">
+                                <span class="oi oi-grid-three-up"></span>
+                            </a>
+                            <div class="dropdown-arrow"></div>
+                            <!-- .dropdown-menu -->
+                            <div class="dropdown-menu dropdown-menu-rich dropdown-menu-right">
+                                <!-- .dropdown-sheets -->
+                                <div class="dropdown-sheets">
+                                    <!-- .dropdown-sheet-item -->
+                                    <div class="dropdown-sheet-item">
+                                        <a href="#" class="tile-wrapper">
+                                  <span class="tile tile-lg bg-indigo">
+                                    <i class="oi oi-people"></i>
+                                  </span>
+                                            <span class="tile-peek">Teams</span>
+                                        </a>
+                                    </div>
+                                    <!-- /.dropdown-sheet-item -->
+                                    <!-- .dropdown-sheet-item -->
+                                    <div class="dropdown-sheet-item">
+                                        <a href="#" class="tile-wrapper">
+                                  <span class="tile tile-lg bg-teal">
+                                    <i class="oi oi-fork"></i>
+                                  </span>
+                                            <span class="tile-peek">Projects</span>
+                                        </a>
+                                    </div>
+                                    <!-- /.dropdown-sheet-item -->
+                                    <!-- .dropdown-sheet-item -->
+                                    <div class="dropdown-sheet-item">
+                                        <a href="#" class="tile-wrapper">
+                                  <span class="tile tile-lg bg-pink">
+                                    <i class="fa fa-tasks"></i>
+                                  </span>
+                                            <span class="tile-peek">Tasks</span>
+                                        </a>
+                                    </div>
+                                    <!-- /.dropdown-sheet-item -->
+                                    <!-- .dropdown-sheet-item -->
+                                    <div class="dropdown-sheet-item">
+                                        <a href="#" class="tile-wrapper">
+                                  <span class="tile tile-lg bg-yellow">
+                                    <i class="oi oi-fire"></i>
+                                  </span>
+                                            <span class="tile-peek">Feeds</span>
+                                        </a>
+                                    </div>
+                                    <!-- /.dropdown-sheet-item -->
+                                    <!-- .dropdown-sheet-item -->
+                                    <div class="dropdown-sheet-item">
+                                        <a href="#" class="tile-wrapper">
+                                  <span class="tile tile-lg bg-cyan">
+                                    <i class="oi oi-document"></i>
+                                  </span>
+                                            <span class="tile-peek">Files</span>
+                                        </a>
+                                    </div>
+                                    <!-- /.dropdown-sheet-item -->
+                                </div>
+                                <!-- .dropdown-sheets -->
+                            </div>
+                            <!-- .dropdown-menu -->
+                        </li>
+                        <!-- /.nav-item -->
+                    </ul>
+                    <!-- /.nav -->
+                    <!-- .btn-account -->
+                    <div class="dropdown">
+                        <button class="btn-account d-none d-md-flex" type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                          <span class="user-avatar">
+                            <img src="/assets/admin/img/profile.jpg" alt="">
+                          </span>
+                            <span class="account-summary pr-lg-4 d-none d-lg-block">
+                            <span class="account-name">Beni Arisandi</span>
+                            <span class="account-description">Marketing Manager</span>
+                          </span>
+                        </button>
+                        <div class="dropdown-arrow dropdown-arrow-left"></div>
+                        <!-- .dropdown-menu -->
+                        <div class="dropdown-menu">
+                            <h6 class="dropdown-header d-none d-md-block d-lg-none"> Beni Arisandi </h6>
+                            <a class="dropdown-item" href="user-profile.html">
+                                <span class="dropdown-icon oi oi-person"></span> Profile</a>
+                            <a class="dropdown-item" href="auth-signin-v1.html">
+                                <span class="dropdown-icon oi oi-account-logout"></span> Logout</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Help Center</a>
+                            <a class="dropdown-item" href="#">Ask Forum</a>
+                            <a class="dropdown-item" href="#">Keyboard Shortcuts</a>
+                        </div>
+                        <!-- /.dropdown-menu -->
+                    </div>
+                    <!-- /.btn-account -->
+                </div>
+                <!-- /.top-bar-item -->
+            </div>
+            <!-- /.top-bar-list -->
+        </div>
+        <!-- /.top-bar -->
+    </header>
+    <aside class="app-aside">
+        <!-- .aside-content -->
+        <div class="aside-content">
+            <!-- .aside-header -->
+            <header class="aside-header d-block d-md-none">
+                <!-- .btn-account -->
+                <button class="btn-account" type="button" data-toggle="collapse" data-target="#dropdown-aside">
+
+                    <span class="account-icon">
+                        <span class="fa fa-caret-down fa-lg"></span>
+                    </span>
+                    <span class="account-summary">
+                <span class="account-name">Beni Arisandi</span>
+                <span class="account-description">Marketing Manager</span>
+              </span>
+                </button>
+                <!-- /.btn-account -->
+                <!-- .dropdown-aside -->
+                <div id="dropdown-aside" class="dropdown-aside collapse">
+                    <!-- dropdown-items -->
+                    <div class="pb-3">
+                        <a class="dropdown-item" href="user-profile.html">
+                            <span class="dropdown-icon oi oi-person"></span> Profile</a>
+                        <a class="dropdown-item" href="auth-signin-v1.html">
+                            <span class="dropdown-icon oi oi-account-logout"></span> Logout</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Help Center</a>
+                        <a class="dropdown-item" href="#">Ask Forum</a>
+                        <a class="dropdown-item" href="#">Keyboard Shortcuts</a>
+                    </div>
+                    <!-- /dropdown-items -->
+                </div>
+                <!-- /.dropdown-aside -->
+            </header>
+            <!-- /.aside-header -->
+            <!-- .aside-menu -->
+            <section class="aside-menu has-scrollable ps ps--active-y">
+                <!-- .stacked-menu -->
+                <nav id="stacked-menu" class="stacked-menu stacked-menu-has-collapsible">
+                    <!-- .menu -->
+                    <ul class="menu">
+                        <!-- .menu-item -->
+                        <li class="menu-item has-active">
+                            <a href="index.html" class="menu-link">
+                                <span class="menu-icon oi oi-dashboard"></span>
+                                <span class="menu-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <!-- /.menu-item -->
+                        <!-- .menu-item -->
+                        <li class="menu-item has-child">
+                            <a href="#" class="menu-link">
+                                <span class="menu-icon oi oi-browser"></span>
+                                <span class="menu-text">Layouts</span>
+                                <span class="badge badge-success">20+</span>
+                            </a>
+                            <!-- child menu -->
+                            <ul class="menu">
+                                <li class="menu-subhead">Layouts</li>
+                                <li class="menu-subhead">Layouts</li>
+                                <li class="menu-item">
+                                    <a href="layout-blank.html" class="menu-link" tabindex="-1">Blank Page</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="layout-nosearch.html" class="menu-link" tabindex="-1">Header no
+                                        Search</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="layout-fullwidth.html" class="menu-link" tabindex="-1">Full Width</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="layout-pagenavs.html" class="menu-link" tabindex="-1">Page Navs</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="layout-pagesidebar.html" class="menu-link" tabindex="-1">Page
+                                        Sidebar</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="layout-pagecover.html" class="menu-link" tabindex="-1">Page Cover</a>
+                                </li>
+                            </ul>
+                            <!-- /child menu -->
+                        </li>
+                        <!-- /.menu-item -->
+                        <!-- .menu-header -->
+                        <li class="menu-header">Interfaces</li>
+                        <!-- /.menu-header -->
+                        <!-- .menu-item -->
+                        <li class="menu-item has-child">
+                            <a href="#" class="menu-link">
+                                <span class="menu-icon oi oi-puzzle-piece"></span>
+                                <span class="menu-text">Components</span>
+                                <span class="badge badge-warning">New</span>
+                            </a>
+                            <!-- child menu -->
+                            <ul class="menu">
+                                <li class="menu-subhead">Components</li>
+                                <li class="menu-subhead">Components</li>
+                                <li class="menu-item">
+                                    <a href="component-general.html" class="menu-link" tabindex="-1">General</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="component-icons.html" class="menu-link" tabindex="-1">Icons</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="component-rich-media.html" class="menu-link" tabindex="-1">Rich
+                                        Media</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="component-list-views.html" class="menu-link" tabindex="-1">List
+                                        Views</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="component-sortable-nestable.html" class="menu-link" tabindex="-1">Sortable
+                                        &amp; Nestable</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="component-activity.html" class="menu-link" tabindex="-1">Activity</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="component-steps.html" class="menu-link" tabindex="-1">Steps</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="component-tasks.html" class="menu-link" tabindex="-1">Tasks</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="component-metrics.html" class="menu-link" tabindex="-1">Metrics</a>
+                                </li>
+                            </ul>
+                            <!-- /child menu -->
+                        </li>
+                        <!-- /.menu-item -->
+                        <!-- .menu-item -->
+                        <li class="menu-item has-child">
+                            <a href="#" class="menu-link">
+                                <span class="menu-icon oi oi-pencil"></span>
+                                <span class="menu-text">Forms</span>
+                            </a>
+                            <!-- child menu -->
+                            <ul class="menu">
+                                <li class="menu-subhead">Forms</li>
+                                <li class="menu-subhead">Forms</li>
+                                <li class="menu-item">
+                                    <a href="form-basic.html" class="menu-link" tabindex="-1">Basic Elements</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="form-autocompletes.html" class="menu-link" tabindex="-1">Autocompletes</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="form-pickers.html" class="menu-link" tabindex="-1">Pickers</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="form-editors.html" class="menu-link" tabindex="-1">Editors</a>
+                                </li>
+                            </ul>
+                            <!-- /child menu -->
+                        </li>
+                        <!-- /.menu-item -->
+                        <!-- .menu-item -->
+                        <li class="menu-item has-child">
+                            <a href="#" class="menu-link">
+                                <span class="menu-icon oi oi-grid-two-up"></span>
+                                <span class="menu-text">Tables</span>
+                            </a>
+                            <!-- child menu -->
+                            <ul class="menu">
+                                <li class="menu-subhead">Tables</li>
+                                <li class="menu-subhead">Tables</li>
+                                <li class="menu-item">
+                                    <a href="table-basic.html" class="menu-link" tabindex="-1">Basic Table</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="table-datatables.html" class="menu-link" tabindex="-1">Datatables</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="table-filters-datatables.html" class="menu-link" tabindex="-1">Filter
+                                        Columns</a>
+                                </li>
+                            </ul>
+                            <!-- /child menu -->
+                        </li>
+                        <!-- /.menu-item -->
+                        <!-- .menu-item -->
+                        <li class="menu-item has-child">
+                            <a href="#" class="menu-link">
+                                <span class="menu-icon oi oi-bar-chart"></span>
+                                <span class="menu-text">Collections</span>
+                            </a>
+                            <!-- child menu -->
+                            <ul class="menu">
+                                <li class="menu-subhead">Collections</li>
+                                <li class="menu-subhead">Collections</li>
+                                <li class="menu-item has-child">
+                                    <a href="#" class="menu-link" tabindex="-1">Chart.js</a>
+                                    <!-- grand child menu -->
+                                    <ul class="menu">
+                                        <li class="menu-item">
+                                            <a href="collection-chartjs-line.html" class="menu-link"
+                                               tabindex="-1">Line</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="collection-chartjs-bar.html" class="menu-link"
+                                               tabindex="-1">Bar</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="collection-chartjs-radar-scatter.html" class="menu-link"
+                                               tabindex="-1">Radar &amp; Scatter</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="collection-chartjs-others.html" class="menu-link" tabindex="-1">Others</a>
+                                        </li>
+                                    </ul>
+                                    <!-- /grand child menu -->
+                                </li>
+                                <li class="menu-item">
+                                    <a href="collection-flot-charts.html" class="menu-link" tabindex="-1">Flot</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="collection-inline-charts.html" class="menu-link" tabindex="-1">Inline
+                                        charts</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="collection-jqvmap.html" class="menu-link" tabindex="-1">Vector Map</a>
+                                </li>
+                            </ul>
+                            <!-- /child menu -->
+                        </li>
+                        <!-- /.menu-item -->
+                        <!-- .menu-item -->
+                        <li class="menu-item has-child">
+                            <a href="#" class="menu-link">
+                                <span class="menu-icon oi oi-list-rich"></span>
+                                <span class="menu-text">Level Menu</span>
+                            </a>
+                            <!-- child menu -->
+                            <ul class="menu">
+                                <li class="menu-subhead">Level Menu</li>
+                                <li class="menu-subhead">Level Menu</li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link" tabindex="-1">Menu item</a>
+                                </li>
+                                <li class="menu-item has-child">
+                                    <a href="#" class="menu-link" tabindex="-1">Menu item</a>
+                                    <!-- grand child menu -->
+                                    <ul class="menu">
+                                        <li class="menu-item">
+                                            <a href="#" class="menu-link" tabindex="-1">Child item</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#" class="menu-link" tabindex="-1">Child item</a>
+                                        </li>
+                                        <li class="menu-item has-child">
+                                            <a href="#" class="menu-link" tabindex="-1">Child item</a>
+                                            <!-- grand child menu -->
+                                            <ul class="menu">
+                                                <li class="menu-item">
+                                                    <a href="#" class="menu-link" tabindex="-1">Grand Child item</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#" class="menu-link" tabindex="-1">Grand Child item</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#" class="menu-link" tabindex="-1">Grand Child item</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#" class="menu-link" tabindex="-1">Grand Child item</a>
+                                                </li>
+                                            </ul>
+                                            <!-- /grand child menu -->
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#" class="menu-link" tabindex="-1">Child item</a>
+                                        </li>
+                                    </ul>
+                                    <!-- /grand child menu -->
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link" tabindex="-1">Menu item</a>
+                                </li>
+                            </ul>
+                            <!-- /child menu -->
+                        </li>
+                        <!-- /.menu-item -->
+                        <!-- .menu-header -->
+                        <li class="menu-header">网页</li>
+                        <!-- /.menu-header -->
+                        <!-- .menu-item -->
+                        <li class="menu-item has-child">
+                            <a href="/admin.php?c=admin&m=index" class="menu-link">
+                                <span class="menu-icon oi oi-wrench"></span>
+                                <span class="menu-text">首页</span>
+                            </a>
+                            <!-- child menu -->
+                            <!--<ul class="menu"><li class="menu-subhead">首页</li>-->
+                            <!--<li class="menu-subhead">首页</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="auth-comingsoon-v1.html" class="menu-link" tabindex="-1">Coming Soon-->
+                            <!--v1</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="auth-comingsoon-v2.html" class="menu-link" tabindex="-1">Coming Soon-->
+                            <!--v2</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="auth-cookie-consent.html" class="menu-link" tabindex="-1">Cookie-->
+                            <!--Consent</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="auth-empty-state.html" class="menu-link" tabindex="-1">Empty State</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="auth-error-v1.html" class="menu-link" tabindex="-1">Error Page v1</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="auth-error-v2.html" class="menu-link" tabindex="-1">Error Page v2</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="auth-error-v3.html" class="menu-link" tabindex="-1">Error Page v3</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="auth-maintenance.html" class="menu-link" tabindex="-1">Maintenance</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="auth-page-message.html" class="menu-link" tabindex="-1">Page-->
+                            <!--Message</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="auth-session-timeout.html" class="menu-link" tabindex="-1">Session-->
+                            <!--Timeout</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="auth-signin-v1.html" class="menu-link" tabindex="-1">Sign In v1</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="auth-signin-v2.html" class="menu-link" tabindex="-1">Sign In v2</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="auth-signup.html" class="menu-link" tabindex="-1">Sign Up</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="auth-recovery-username.html" class="menu-link" tabindex="-1">Recovery-->
+                            <!--Username</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="auth-recovery-password.html" class="menu-link" tabindex="-1">Recovery-->
+                            <!--Password</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="auth-lockscreen.html" class="menu-link" tabindex="-1">Screen Locked</a>-->
+                            <!--</li>-->
+                            <!--</ul>-->
+                            <!-- /child menu -->
+                        </li>
+                        <!-- /.menu-item -->
+                        <!-- .menu-item -->
+                        <li class="menu-item has-child">
+                            <a href="/admin.php?c=admin&m=news&page=1" class="menu-link">
+                                <span class="menu-icon oi oi-people"></span>
+                                <span class="menu-text">新闻</span>
+                            </a>
+                            <!--child menu -->
+                            <!--<ul class="menu"><li class="menu-subhead">新闻</li>-->
+                            <!--<li class="menu-subhead">User</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="user-profile.html" class="menu-link" tabindex="-1">Profile</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="user-activities.html" class="menu-link" tabindex="-1">Activities</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="user-teams.html" class="menu-link" tabindex="-1">Teams</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="user-projects.html" class="menu-link" tabindex="-1">Projects</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="user-tasks.html" class="menu-link" tabindex="-1">Tasks</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="user-profile-settings.html" class="menu-link" tabindex="-1">Profile-->
+                            <!--Settings</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="user-account-settings.html" class="menu-link" tabindex="-1">Account-->
+                            <!--Settings</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="user-billing-settings.html" class="menu-link" tabindex="-1">Billing-->
+                            <!--Settings</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="user-notification-settings.html" class="menu-link" tabindex="-1">Notification-->
+                            <!--Settings</a>-->
+                            <!--</li>-->
+                            <!--</ul>-->
+                            <!-- /child menu -->
+                        </li>
+                        <!-- /.menu-item -->
+                        <!-- .menu-item -->
+                        <li class="menu-item has-child">
+                            <a href="/admin.php?c=admin&m=category" class="menu-link">
+                                <span class="menu-icon oi oi-infinity"></span>
+                                <span class="menu-text">分类</span>
+                            </a>
+                            <!-- child menu -->
+                            <!--<ul class="menu"><li class="menu-subhead">分类</li>-->
+                            <!--<li class="menu-subhead">Apps</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="app-messages.html" class="menu-link" tabindex="-1">Messages</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="app-conversations.html" class="menu-link" tabindex="-1">Conversations</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="app-boards.html" class="menu-link" tabindex="-1">Boards</a>-->
+                            <!--</li>-->
+                            <!--<li class="menu-item">-->
+                            <!--<a href="app-feeds.html" class="menu-link" tabindex="-1">Feeds</a>-->
+                            <!--</li>-->
+                            <!--</ul>-->
+                            <!-- /child menu -->
+                        </li>
+                        <!-- /.menu-item -->
+                    </ul>
+                    <!-- /.menu -->
+                </nav>
+                <!-- /.stacked-menu -->
+                <div class="ps__rail-x" style="left: 0px; bottom: -2px;">
+                    <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                </div>
+                <div class="ps__rail-y" style="top: 2px; height: 508px; right: 0px;">
+                    <div class="ps__thumb-y" tabindex="0" style="top: 2px; height: 506px;"></div>
+                </div>
+                <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                    <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                </div>
+                <div class="ps__rail-y" style="top: 0px; height: 194px; right: 0px;">
+                    <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 73px;"></div>
+                </div>
+            </section>
+            <!-- /.aside-menu -->
+        </div>
+        <!-- /.aside-content -->
+    </aside>

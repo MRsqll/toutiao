@@ -1,13 +1,51 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>分类管理</title>
-</head>
-<body>
-    <h1>分类页</h1>
-</body>
-</html>
+<?php include '../views/admin/category_header.html' ?>
+<main class="app-main">
+    <div class="wrapper">
+        <div class="page">
+            <div class="page-inner">
+                <header class="page-title-bar">
+                    <p class="lead">
+                        <span class="font-weight-bold">Hi, Beni.</span>
+                        <span class="d-block text-muted">Here’s what’s happening with your business today.</span>
+                    </p>
+                </header>
+                <div class="page-section">
+                    <h1>Category</h1>
+                    <table class="table table-bordered tab-content" style="text-align: center">
+                        <thead>
+                        <tr>
+                            <th class="text-apple">id</th>
+                            <th class="text-apple">is_default</th>
+                            <th class="text-apple">name</th>
+                            <th class="text-apple">delete</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($category as $k => $v) {?>
+                        <tr>
+                            <td>
+                                <?php echo $v['id']?>
+                            </td>
+                            <td>
+                                <?php echo $v['is_default']?>
+                            </td>
+                            <td>
+                                <?php echo $v['name']?>
+                            </td>
+                            <td>
+                                <button type="button" class="remove btn btn-warning">删除</button>
+                            </td>
+                        </tr>
+                        <?php }?>
+                        总条数：<?php echo $num?>
+                        </tbody>
+
+
+                    </table>
+                </div>
+                <ul id="pagination-demo" class="pagination-sm"></ul>
+            </div>
+        </div>
+    </div>
+</main>
+<?php include '../views/admin/category_footer.html' ?>
