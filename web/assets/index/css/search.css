@@ -163,3 +163,14 @@
     font-size: .3rem;
     padding: .1rem;
 }
+#loadmore{
+    text-align: center;
+    height: .26rem;
+    border-radius: .05rem;
+    opacity: .8;
+    line-height: .26rem;
+    margin: .1rem .24rem;
+    background: #c3d2dc;
+    font-size: .18rem;
+    color: #333;
+}

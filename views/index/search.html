@@ -21,7 +21,7 @@
             <div class="abs_m">搜索</div>
         </div>
     </header>
-    <form action="/index.php" method="get" id="search-form">
+    <form action="/index.php" id="search-form">
         <div class="search-content">
             <a href="javascript:void (0)" class="action-chooser"></a>
             <div class="arrowdown"></div>
@@ -29,29 +29,17 @@
             <input type="hidden" name="m" value="search">
             <input type="text" placeholder="请输入搜索关键词" id="search-input" name="wd">
         </div>
-        <div class="action-navigation">
-            <div class="arrowup-shadow"></div>
-            <div class="arrowup"></div>
-            <ul class="navigation-categories">
-                <li>
-                    <a href="javascrit:void(0)">新闻</a>
-                </li>
-                <li>
-                    <a href="javascrit:void(0)">神马</a>
-                </li>
-                <li></li>
-            </ul>
         </div>
         <content id="search">
             <div class="hot_words">
-                <ul id="ul">
-                    <?php if($total_num == 0){?>
-                        <div>没有找到你想要的结果</div>
-                    <?php } ?>
+                <?php if($total_num == 0){?>
+                    <div>没有找到你想要的结果</div>
+                <?php } ?>
 
-                    <?php if($total_num !=0){?>
-                        <div>这次找到<?php echo $total_num?>条结果</div>
-                    <?php } ?>
+                <?php if($total_num !=0){?>
+                    <div>这次找到<?php echo $total_num?>条结果</div>
+                <?php } ?>
+                <ul id="ul">
                     <?php foreach ($results as $k => $v) {?>
                     <li>
                         <a href="javascript:void(0)" class="hot_words_link">
@@ -59,11 +47,10 @@
                         </a>
                     </li>
                     <?php }?>
-
-                    <?php if ( $total_num > 3) { ?>
-                    <button id="loadmore">加载更多</button>
-                    <?php }?>
                 </ul>
+                <?php if ( $total_num > 3) { ?>
+                    <button id="loadmore">加载更多</button>
+                <?php }?>
             </div>
         </content>
     </form>
@@ -72,12 +59,16 @@
         $(function () {
             $('#loadmore').click(function () {
                 $.ajax({
-                    url:'/index.php?c=news&m=search&wd=<?php echo $keyword?>&page='+ ( page + 1),
+                    url:'/index.php?c=news&m=searchdata&wd=<?php echo $keyword?>&page='+ ( page + 1),
                     success:function (data){
                         page = page + 1;
                         data=JSON.parse(data);
                         if(data.length){
-
+                            $(`<li>
+                        <a href="javascript:void(0)" class="hot_words_link">
+                             ${v.title}
+                        </a>
+                    </li>`).appendTo('#ul');
                         }else{
                             alert('没有加载更多')
                             $('#loadmore').remove();

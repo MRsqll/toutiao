@@ -48,7 +48,7 @@ class news extends db
                 ->fetch()['total_num'];
 
             $results = $this->pdo
-                ->query('select * from news where title like "%' . $keyword . '%" limit '. $this::PER_PAGE)
+                ->query('select * from news where title like "%' . $keyword . '%" limit '. $this::PER_PAGE.' offset 0')
                 ->fetchAll();
         }
         include '../views/index/search.html';
@@ -56,9 +56,9 @@ class news extends db
 //搜索数据资源
     public function searchdata()
     {
-        $page = 1;
-        $keyword = '';
         if(isset( $_GET['page']) && $_GET['wd'] ){
+            $page = $_GET['page'];
+            $wd = $_GET['wd'];
             $r = $this->pdo
                 ->query('select * from news where title like "%' . $keyword . '%" limit '. $this::PER_PAGE .' offset '.($page - 1 )*$this::PER_PAGE)
                 ->fetchAll();
