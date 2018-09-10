@@ -29,8 +29,11 @@
                 <span class="controltitle">点击删除以下频道</span>
             </div>
             <ul class="controlDetail" id="aa">
+                <li class="channelFigure">
+                    <a href="javascript:void(0)">推荐</a>
+                </li>
                     <?php foreach($category as $k => $v) { ?>
-                    <li class="channelFigure">
+                    <li class="channelFigure" data-id= "<?php echo $v['id']?>">
                         <a href="javascript:void(0)"><?php echo $v['name']?></a>
                     </li>
                     <?php }?>
@@ -45,7 +48,7 @@
             </div>
             <ul class="controlDetail" id="bb">
                 <?php foreach ($categorys as $k => $v ) {?>
-                    <li class="channelFigure">
+                    <li class="channelFigure" data-id= "<?php echo $v['id']?>">
                         <a href="javascript:void(0)"><?php echo $v['name']?></a>
                     </li>
                 <?php }?>
