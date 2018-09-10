@@ -40,7 +40,7 @@ class news extends db
     {
          $total_num = null;
          $results = [];
-         $keyword = '';
+         // $keyword = '';
         if(isset($_GET['wd'])){
             $keyword = $_GET['wd'];
             $total_num = $this->pdo
@@ -56,12 +56,13 @@ class news extends db
 //搜索数据资源
     public function searchdata()
     {
-        if(isset( $_GET['page']) && $_GET['wd'] ){
+        if(isset( $_GET['page']) && isset($_GET['wd']) ){
             $page = $_GET['page'];
             $wd = $_GET['wd'];
             $r = $this->pdo
-                ->query('select * from news where title like "%' . $keyword . '%" limit '. $this::PER_PAGE .' offset '.($page - 1 )*$this::PER_PAGE)
+                ->query('select * from news where title like "%'.$wd.'%" limit '.$this::PER_PAGE.' offset '.($page - 1 )*$this::PER_PAGE)
                 ->fetchAll();
+
             echo json_encode($r);
         }else{
             echo json_encode('参数错误');

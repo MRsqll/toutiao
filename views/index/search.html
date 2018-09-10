@@ -49,13 +49,13 @@
                     <?php }?>
                 </ul>
                 <?php if ( $total_num > 3) { ?>
-                    <button id="loadmore">加载更多</button>
+                    <div type="submit" id="loadmore">加载更多</div>
                 <?php }?>
             </div>
         </content>
     </form>
     <script>
-        page = 1;
+        let page = 1;
         $(function () {
             $('#loadmore').click(function () {
                 $.ajax({
@@ -63,12 +63,15 @@
                     success:function (data){
                         page = page + 1;
                         data=JSON.parse(data);
+                        console.log(data);
                         if(data.length){
-                            $(`<li>
-                        <a href="javascript:void(0)" class="hot_words_link">
-                             ${v.title}
-                        </a>
-                    </li>`).appendTo('#ul');
+                            data.forEach( v => {
+                                 $(`<li>
+                                        <a href="javascript:void(0)" class="hot_words_link">
+                                            ${v.title}
+                                        </a>
+                                    </li>`).appendTo('#ul');
+                            })
                         }else{
                             alert('没有加载更多')
                             $('#loadmore').remove();
